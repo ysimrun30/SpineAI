@@ -1,0 +1,83 @@
+# ========================
+# 🔐 Environment Variables
+# ========================
+.env
+.env.*
+*.env
+
+# ========================
+# 📦 Node.js (Express + React)
+# ========================
+node_modules/
+**/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build folders
+build/
+dist/
+frontend/build/
+
+# ========================
+# 🐍 Python (Flask)
+# ========================
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Flask instance folder
+instance/
+
+# ========================
+# 🗄️ Database (Mongo / Local DB files)
+# ========================
+*.sqlite3
+*.db
+
+# ========================
+# 📁 Uploads / Generated Files
+# ========================
+uploads/
+backend/uploads/
+
+# ========================
+# ⚙️ IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========================
+# 🖥️ OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# 🐳 Docker
+# ========================
+docker-compose.override.yml
+*.pid
+
+# ========================
+# ⚡ Cache / Temp
+# ========================
+.cache/
+tmp/
+temp/
+
+# ========================
+# 📊 Optional (Datasets)
+# ========================
+# Uncomment if datasets are large
+# *.csv
+# *.json

@@ -1,0 +1,124 @@
+{
+  "feature_cols": [
+    "condition",
+    "age",
+    "gender",
+    "bmi",
+    "pain_score",
+    "mobility_score",
+    "movement_accuracy",
+    "posture_score",
+    "session_number",
+    "symptom_duration_months",
+    "prior_therapy",
+    "nerve_involvement",
+    "mri_severity",
+    "session_duration_min"
+  ],
+  "cat_features": [
+    "condition",
+    "gender",
+    "mri_severity"
+  ],
+  "num_cols": [
+    "age",
+    "bmi",
+    "pain_score",
+    "mobility_score",
+    "movement_accuracy",
+    "posture_score",
+    "session_number",
+    "symptom_duration_months",
+    "session_duration_min"
+  ],
+  "clf_targets": [
+    "recommended_exercise",
+    "surgery_recommended",
+    "risk_level",
+    "therapy_phase"
+  ],
+  "reg_targets": [
+    "sets",
+    "reps",
+    "hold_sec",
+    "rest_sec"
+  ],
+  "label_maps": {
+    "condition": {
+      "herniated_disc": 0,
+      "kyphosis": 1,
+      "normal": 2,
+      "scoliosis": 3,
+      "slip_disc": 4,
+      "spinal_stenosis": 5
+    },
+    "gender": {
+      "female": 0,
+      "male": 1
+    },
+    "mri_severity": {
+      "mild": 0,
+      "moderate": 1,
+      "none": 2,
+      "severe": 3
+    }
+  },
+  "target_label_maps": {
+    "recommended_exercise": {
+      "0": "bird_dog",
+      "1": "bridge",
+      "2": "cat_cow",
+      "3": "chest_stretch",
+      "4": "dead_bug",
+      "5": "deadlift",
+      "6": "diaphragmatic_breathing",
+      "7": "heel_slides",
+      "8": "knee_to_chest",
+      "9": "pelvic_tilt",
+      "10": "plank",
+      "11": "row_exercise",
+      "12": "seated_march",
+      "13": "side_plank",
+      "14": "side_stretch",
+      "15": "squat",
+      "16": "thoracic_extension",
+      "17": "thoracic_rotation"
+    },
+    "risk_level": {
+      "0": "high",
+      "1": "low",
+      "2": "medium"
+    },
+    "therapy_phase": {
+      "0": "acute",
+      "1": "rehabilitation",
+      "2": "subacute"
+    }
+  },
+  "evaluation": {
+    "classification_f1": {
+      "recommended_exercise": 0.411,
+      "surgery_recommended": 0.978,
+      "risk_level": 0.8402,
+      "therapy_phase": 1.0
+    },
+    "regression_metrics": {
+      "sets": {
+        "mae": 0.578,
+        "r2": 0.466
+      },
+      "reps": {
+        "mae": 1.55,
+        "r2": 0.832
+      },
+      "hold_sec": {
+        "mae": 0.853,
+        "r2": 0.697
+      },
+      "rest_sec": {
+        "mae": 5.823,
+        "r2": 0.801
+      }
+    }
+  }
+}
